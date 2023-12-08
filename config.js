@@ -49,7 +49,7 @@ module.exports = {
       bot: "Features only accessible by me",
       media: "Reply media...",
       query: "Enter Query!",
-      error: "An error occurred while retrieving data!!",
+      error: "An error occurred while retrieving data.",
       quoted: "Reply message...",
       wait: "Wait a minute...",
       urlInvalid: "Url Invalid",

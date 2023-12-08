@@ -7,7 +7,7 @@ module.exports = {
   tags: ["owner"],
   run: async (m, { conn}) => {
     if (!m.quoted?.text) return m.reply("Reply pesan code");
-    let dir = m.text.includes(".js") ? m.text : `command/${m.text}.js`;
+    let dir = m.text.includes(".js") ? m.text : `plugins/${m.text}.js`;
     await fs.writeFileSync(dir, m.quoted.body);
     m.reply(`tersimpan di '${dir}'`);
   },
