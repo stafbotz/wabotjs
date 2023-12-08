@@ -4,7 +4,7 @@ module.exports = {
 	name: "mode",
 	command: ["mode"],
 	tags: ["owner"],
-	run: async ({ conn, m }) => {
+	run: async (m, { conn }) => {
 		if (m.text == "self") {
 			m.reply("Success self mode")
 			config.options.public = false 

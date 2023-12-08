@@ -1,6 +1,11 @@
+require("dotenv").config();
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
+const moment = require('moment-timezone');
+moment.tz.setDefault("Asia/Jakarta").locale("id")
+
+const sekarang = moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')
 
 module.exports = {
 	options: {
@@ -11,7 +16,8 @@ module.exports = {
       sessionName: "session", // for name session
       prefix: /^[°•π÷×¶∆£¢€¥®™+✓_|/~!?@#%^&.©^]/i,
       pairingNumber: "", // Example Input : 62xxx
-      pathPlugins: "plugins"
+      pathPlugins: "plugins",
+      wm: "*Source:* https://api.arifzyn.biz.id"
    },
    
    // Function Maybee
@@ -29,8 +35,8 @@ module.exports = {
    // Set pack name sticker on here
    Exif: {
       packId: "https://api.arifzyn.biz.id",
-      packName: `Sticker Ini Dibuat Oleh :`,
-      packPublish: "Arifzyn.",
+      packName: null,
+      packPublish: '         Arifzyn. - Assistant\n      ——————————————\n\nCreated on date:\n' + sekarang,
       packEmail: "arifzyn906@gmail.com",
       packWebsite: "https://api.arifzyn.biz.id",
       androidApp: "https://play.google.com/store/apps/details?id=com.bitsmedia.android.muslimpro",
@@ -49,6 +55,7 @@ module.exports = {
       bot: "Features only accessible by me",
       media: "Reply media...",
       query: "Enter Query!",
+      noUrl: "please input a url.",
       error: "An error occurred while retrieving data.",
       quoted: "Reply message...",
       wait: "Wait a minute...",

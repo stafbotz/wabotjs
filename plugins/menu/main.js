@@ -8,6 +8,9 @@ const readmore = more.repeat(4001);
 
 const tags = {
   ai: "*Artificial Intelligence*",
+  convert: "*CONVERT*",
+  download: "*DOWNLOADER*",
+  group: "*GROUP*",
   owner: "*OWNER / MODS*",
   other: "*OTHERS*",
   main: "*MAIN*",
@@ -28,8 +31,7 @@ I am an automated system (WhatsApp Bot) that can help to do something, search an
 ╏↬ *Tanggal* : *%date*
 ╏↬ *Version* : *%version*
 ╏↬ *Prefix Used* : *[ %p ]*
-╰────────────๑
-
+╰────────────๑ 
 ${readmore} 
 `.trimStart(),
   header: "╭─「 %category 」",

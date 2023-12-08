@@ -6,6 +6,7 @@ const Jimp = require('jimp');
 const { parsePhoneNumber } = require('libphonenumber-js');
 const Crypto = require('crypto');
 const { fromBuffer } = require("file-type");
+const { writeExif } = require("./sticker");
 
 const config = require("../../config");
 const Function = require("./function");
