@@ -16,6 +16,7 @@
   "author": "ArifzynXD",
   "license": "MIT",
   "dependencies": {
+    "@arifzyn/scraper": "^1.1.2",
     "@hapi/boom": "^10.0.1",
     "@whiskeysockets/baileys": "^6.5.0",
     "chalk": "^4.1.2",
