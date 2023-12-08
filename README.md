@@ -26,7 +26,7 @@ node system/index.js --pairing
 
 #### If npm install failed, try using yarn instead of npm
 ```bah
-yarn install
+yarn
 ```
 ---------
 
