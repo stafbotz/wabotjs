@@ -12,8 +12,8 @@ module.exports = {
       public: false,
       antiCall: true, // reject call
       database: "database.json", // End .json when using JSON database or use Mongo URI
-      owner: ["6288213503541"], // set owner number on here
-      pairing: "6288213503541",
+      owner: ["628153018554"], // set owner number on here
+      pairing: "6288708587429",
       sessionName: "session", // for name session
       prefix: /^[°•π÷×¶∆£¢€¥®™+✓_|/~!?@#%^&.©^]/i,
       pairingNumber: "", // Example Input : 62xxx
