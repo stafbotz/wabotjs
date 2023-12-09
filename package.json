@@ -16,21 +16,19 @@
   "author": "ArifzynXD",
   "license": "MIT",
   "dependencies": {
-    "@arifzyn/scraper": "^1.1.2",
     "@hapi/boom": "^10.0.1",
     "@whiskeysockets/baileys": "^6.5.0",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.12",
     "chokidar": "^3.5.3",
-    "crypto-js": "^4.2.0",
     "dotenv": "^16.3.1",
     "fluent-ffmpeg": "^2.1.2",
     "jimp": "^0.16.13",
     "moment-timezone": "^0.5.43",
     "node-cache": "^5.1.2",
+    "node-fetch": "^2.6.11",
     "node-webpmux": "^3.2.0",
     "readline": "^1.3.0",
-    "simple-json-db": "^2.0.0",
     "syntax-error": "^1.4.0"
   }
 }

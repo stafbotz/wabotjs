@@ -1,4 +1,6 @@
 "use-string";
+process.on('uncaughtException', console.error)
+
 const Collection = require("./lib/collection.js");
 const { Message, readPlungins } = require("./handler/message");
 const { Client, serialize } = require("./lib/serialize");

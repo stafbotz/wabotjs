@@ -11,6 +11,7 @@ module.exports = {
       );
     if (!m.text.includes("tiktok.com")) return m.reply(`Invalid Tiktok URL.`);
     m.reply(config.msg.wait);
+    try {
     let res = await Func.fetchJson(API("arifzyn", "/download/tiktok", { url: m.text }, "apikey"))
     res = res.result
     let txt = `${res.description}\n\n`;
@@ -44,6 +45,10 @@ module.exports = {
           isPremium ? Func.ranNumb(700, 1000) : Func.ranNumb(800, 1500),
         );
       }
+    }
+    } catch (e) {
+    	console.error(e)
+    	m.reply(config.msg.error)
     }
   },
 };

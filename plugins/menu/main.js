@@ -12,8 +12,9 @@ const tags = {
   download: "*DOWNLOADER*",
   group: "*GROUP*",
   owner: "*OWNER / MODS*",
-  other: "*OTHERS*",
+  info: "*INFORMATION*",
   main: "*MAIN*",
+  rpg: "*RPG*",
 };
 
 const defaultMenu = {
@@ -180,10 +181,10 @@ module.exports = {
         mentionedJid: await conn.parseMention(text),
         externalAdReply: {
           showAdAttribution: true,
-          title: "",
-          body: "",
+          title: `${moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')}`,
+          body: "Copyright © 2023 Arifzyn.",
           thumbnailUrl: "https://telegra.ph/file/0ca2ed4df216d05d9a5bf.jpg",
-          sourceUrl: global.link,
+          sourceUrl: config.Exif.packId,
           mediaType: 1,
           renderLargerThumbnail: true,
         },
