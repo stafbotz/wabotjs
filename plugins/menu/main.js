@@ -36,9 +36,9 @@ I am an automated system (WhatsApp Bot) that can help to do something, search an
 ╰────────────๑ 
 ${readmore} 
 `.trimStart(),
-  header: "╭─「 %category 」",
-  body: "│❖ %cmd %isFree %isCoin jjjj",
-  footer: "╰────● ",
+  header: "*%category*",
+  body: "%cmd %isFree %isCoin",
+  footer: "",
   after: `\n*Powerred By :* _https://api.arifzyn.biz.id_`,
 };
 
