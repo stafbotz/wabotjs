@@ -6,8 +6,7 @@ async function idb(m) {
   let user = global.db.users[m.sender];
   if (typeof user !== "object") global.db.users[m.sender] = {};
   if (user) {
-    if (!isNumber(user.limit)) user.limit = 25;
-    if (!isBoolean(user.premium)) user.premium = m.isOwner ? true : false;
+    if (!isNumber(user.coin)) user.coin = 100;
     if (!("lastChat" in user)) user.lastChat = new Date() * 1;
     if (!("name" in user)) user.name = m.pushName;
     if (!isBoolean(user.banned)) user.banned = false;
@@ -88,9 +87,8 @@ async function idb(m) {
     if (!isNumber(user.adventurecount)) user.adventurecount = 0;
   } else {
     global.db.users[m.sender] = {
-      limit: 25,
+      coin: 100,
       lastChat: new Date() * 1,
-      premium: m.isOwner ? true : false,
       name: m.pushName,
       banned: false,
 
