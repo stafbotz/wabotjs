@@ -1,7 +1,7 @@
 {
   "name": "Luuqee BOT",
   "version": "1.0.0",
-  "description": "Simple Base Source Code Bot WhatsApp.",
+  "description": "Bot Whatsapp Multi Fungsi Dilengkapi dengan Tenaga AI.",
   "main": "system/index.js",
   "scripts": {
     "start": "node system/index.js --pairing",
