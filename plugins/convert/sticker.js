@@ -19,5 +19,6 @@ module.exports = {
 		} else {
 			m.reply(`Send or reply to media`) 
 		}
-	}
+	},
+	free: true
 }
