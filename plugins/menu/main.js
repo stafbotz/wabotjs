@@ -8,13 +8,10 @@ const readmore = more.repeat(4001);
 
 const tags = {
   ai: "*AI*",
-  convert: "*CONVERT*",
+  mouverse: "*MOU VERSE*",
   download: "*DOWNLOADER*",
   group: "*GROUP*",
-  owner: "*OWNER / MODS*",
-  info: "*INFORMATION*",
-  main: "*MAIN*",
-  rpg: "*RPG*",
+  info: "*TOPUP COIN*",
 };
 
 const defaultMenu = {
