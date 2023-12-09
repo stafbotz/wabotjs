@@ -13,10 +13,8 @@ module.exports = {
       antiCall: true, // reject call
       database: "database.json", // End .json when using JSON database or use Mongo URI
       owner: ["6288708587429"], // set owner number on here
-      pairing: "628153018554",
       sessionName: "session", // for name session
       prefix: /^[°•π÷×¶∆£¢€¥®™+✓_|/~!?@#%^&.©^]/i,
-      pairingNumber: "628153018554", // Example Input : 62xxx
       pathPlugins: "plugins",
       wm: "*Source:* https://api.arifzyn.biz.id"
    },
