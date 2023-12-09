@@ -91,7 +91,7 @@ module.exports = {
     let muptime = Function.clockString(_muptime);
     let uptime = Function.clockString(_uptime);
 
-    const help = Array.from(plugins.values()).filter(menu => !menu.hidden).map((menu) => {
+    const help = Array.from(plugins.values()).filter(menu => !menu.isOwner).map((menu) => {
       return {
         help: Array.isArray(menu.name) ? menu.name : [menu.name],
         tags: Array.isArray(menu.tags) ? menu.tags : [menu.tags],
