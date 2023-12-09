@@ -4,7 +4,7 @@
   "description": "Simple Base Source Code Bot WhatsApp.",
   "main": "system/index.js",
   "scripts": {
-    "start": "node system/index.js",
+    "start": "node system/index.js --pairing",
     "neat": "npx prettier --write ."
   },
   "keywords": [
