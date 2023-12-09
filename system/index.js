@@ -26,7 +26,6 @@ const fs = require("fs");
 const chokidar = require("chokidar");
 
 const msgRetryCounterCache = new NodeCache();
-const pairingCode = process.argv.includes("--pairing");
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -47,7 +46,7 @@ const connectToWhatsApp = async () => {
 	
 	const { state, saveCreds } = await useMultiFileAuthState("system/temp/session");
 	const conn = makeWaSocket({
-    printQRInTerminal: !pairingCode,
+    printQRInTerminal: false,
     logger: pino({
       level: "silent",
     }),
@@ -72,20 +71,20 @@ const connectToWhatsApp = async () => {
     defaultQueryTimeoutMs: 0, 
   });
   
-  if (pairingCode && !conn.authState.creds.registered) {
-    console.log(` ${chalk.redBright("Please type your WhatsApp number")}:`);
-    let phoneNumber = await question(`   ${chalk.cyan("- Number")}: `);
+  if (!conn.authState.creds.registered) {
+    console.log(`${chalk.redBright("Please type your WhatsApp number")}:`);
+    let phoneNumber = await question(`${chalk.cyan("- Number")}: `);
     phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
     if (!Object.keys(PHONENUMBER_MCC).some((v) => phoneNumber.startsWith(v))) {
-      console.log(` ${chalk.redBright("Start with your country's WhatsApp code, Example 62xxx")}:`);
-      console.log(` ${chalk.redBright("Please type your WhatsApp number")}:`);
+      console.log(`${chalk.redBright("Start with your country's WhatsApp code, Example 62xxx")}:`);
+      console.log(`${chalk.redBright("Please type your WhatsApp number")}:`);
       phoneNumber = await question(`   ${chalk.cyan("- Number")}: `);
       phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
     }
     let code = await conn.requestPairingCode(phoneNumber);
     code = code?.match(/.{1,4}/g)?.join("-") || code;
-    console.log(`  ${chalk.redBright("Your Pairing Code")}:`);
-    console.log(`   ${chalk.cyan("- Code")}: ${code}`);
+    console.log(`${chalk.redBright("Your Pairing Code")}:`);
+    console.log(`${chalk.cyan("- Code")}: ${code}`);
     rl.close();
   }
 
