@@ -20,8 +20,8 @@ const tags = {
 const defaultMenu = {
   before: `
 Hai, %name! 👋
-I am an automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.
-*STATUS LUUQEE BOT*
+Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa [./#] maka saya bisa menjadi asisten pribadimu!
+*(STATUS LUUQEE BOT)*
 *Library Luuqee BOT:* Baileys
 *Version Luuqee BOT* : %version
 *Luuqee BOT Aktif Selama* : %uptime
@@ -29,7 +29,7 @@ I am an automated system (WhatsApp Bot) that can help to do something, search an
 *Waktu* : %time
 *Tanggal* : %date
 
-*STATUS KAMU*
+*(STATUS KAMU)*
 *Kelas Kamu*: *VIII*
 *Game Favorit*: *Mobile Legend*
 *Sisa Koin Mou Kamu*: %coin
@@ -38,7 +38,10 @@ ${readmore} `.trimStart(),
   header: '%category',
   body: ' • %cmd %isFree %isCoin',
   footer: '\n',
-  after: `\n*Powerred By :* _https://api.arifzyn.biz.id_`,
+  after: `*Made by ♡*
+*%npmname* | %version
+${'```%npmdesc```'}
+`,
 };
 
 module.exports = {
