@@ -20,7 +20,8 @@ const tags = {
 const defaultMenu = {
   before: `
 Hai, %name! 👋
-Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa [./#] maka saya bisa menjadi asisten pribadimu!
+Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa awalan [./#!] maka saya bisa menjadi asisten pribadimu!
+
 *(STATUS LUUQEE BOT)*
 *Library Luuqee BOT:* Baileys
 *Version Luuqee BOT* : %version
