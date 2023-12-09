@@ -2,7 +2,7 @@
 process.on('uncaughtException', console.error)
 
 const Collection = require("./lib/collection.js");
-const { Message, readPlungins } = require("./handler/message");
+const { Message, readPlugins } = require("./handler/message");
 const { Client, serialize } = require("./lib/serialize");
 const Function = require("./lib/function");
 
@@ -42,7 +42,7 @@ const store = makeInMemoryStore({
 global.plugins = new Collection()
 
 const connectToWhatsApp = async () => {
-	await readPlungins()
+	await readPlugins()
 	
 	const { state, saveCreds } = await useMultiFileAuthState("system/temp/session");
 	const conn = makeWaSocket({
