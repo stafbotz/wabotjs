@@ -138,7 +138,7 @@ module.exports.Message = async (conn, m, store) => {
     }
 }
 
-module.exports.readPlungins = async (pathname = config.options.pathPlugins) => {
+module.exports.readPlugins = async (pathname = config.options.pathPlugins) => {
 	try {
 		const folder = config.options.pathPlugins || "plugins"
 		const dir = fs.readdirSync(folder); 
