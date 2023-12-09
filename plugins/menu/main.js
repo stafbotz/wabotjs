@@ -32,11 +32,12 @@ I am an automated system (WhatsApp Bot) that can help to do something, search an
 ╏↬ *Tanggal* : *%date*
 ╏↬ *Version* : *%version*
 ╏↬ *Prefix Used* : *[ %p ]*
+        *Your Limit: %coin
 ╰────────────๑ 
 ${readmore} 
 `.trimStart(),
   header: "╭─「 %category 」",
-  body: "│❖ %cmd %islimit %isPremium",
+  body: "│❖ %cmd %isFree %isCoin",
   footer: "╰────● ",
   after: `\n*Powerred By :* _https://api.arifzyn.biz.id_`,
 };
@@ -52,7 +53,7 @@ module.exports = {
         .catch((_) => "{}"),
     );
     let name = `@${m.sender.split("@")[0]}`;
-    let { exp, limit, level, role } = global.db.users[m.sender];
+    let { exp, coin, level, role } = global.db.users[m.sender];
     let d = new Date(new Date() + 3600000);
     let locale = "id";
     const wib = moment.tz("Asia/Jakarta").format("HH:mm:ss");
@@ -126,8 +127,8 @@ module.exports = {
                   .map((help) => {
                     return body
                       .replace(/%cmd/g, menu.prefix + help)
-                      .replace(/%islimit/g, menu.limit ? "(Ⓛ)" : "")
-                      .replace(/%isPremium/g, menu.premium ? "(Ⓟ)" : "")
+                      .replace(/%isFree/g, menu.free ? "(Ⓕ)" : "")
+                      .replace(/%isCoin/g, menu.coin ? "(Ⓒ)" : "")
                       .trim();
                   })
                   .join("\n");
@@ -157,7 +158,7 @@ module.exports = {
         ? package.homepage.url || package.homepage
         : "[unknown github url]",
       level,
-      limit,
+      coin,
       name,
       weton,
       week,
