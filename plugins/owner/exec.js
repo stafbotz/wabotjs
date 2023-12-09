@@ -22,4 +22,5 @@ module.exports = {
     }
   },
   noPrefix: true,
+  isOwner: true
 };
