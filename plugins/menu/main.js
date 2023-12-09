@@ -19,26 +19,20 @@ const tags = {
 
 const defaultMenu = {
   before: `
-Hi %name
+Hai, %name! 👋
 I am an automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.
-╭────────────๑
-╏↬ *Library:* *Baileys*
-╏↬ *Function:* *Assistant*
-╰────────────๑
-╭────────────๑ 
-╏↬ *Uptime* : *%uptime*
-╏↬ *Hari* : *%week %weton*
-╏↬ *Waktu* : *%time*
-╏↬ *Tanggal* : *%date*
-╏↬ *Version* : *%version*
-╏↬ *Prefix Used* : *[ %p ]*
-        *Your Limit: %coin
-╰────────────๑ 
-${readmore} 
-`.trimStart(),
-  header: "%category",
-  body: "%cmd %isFree %isCoin",
-  footer: "",
+
+*Library:* Baileys
+*Version Luuqee BOT* : %version
+*Luuqee BOT Aktif Selama* : %uptime
+*Hari* : %week %weton
+*Waktu* : %time
+*Tanggal* : %date
+*Sisa koin kamu: %coin
+${readmore} `.trimStart(),
+  header: '%category',
+  body: ' • %cmd %isFree %isCoin',
+  footer: '\n',
   after: `\n*Powerred By :* _https://api.arifzyn.biz.id_`,
 };
 
