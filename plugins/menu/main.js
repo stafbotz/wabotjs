@@ -7,7 +7,7 @@ const more = String.fromCharCode(8206);
 const readmore = more.repeat(4001);
 
 const tags = {
-  ai: "*Artificial Intelligence*",
+  ai: "*AI*",
   convert: "*CONVERT*",
   download: "*DOWNLOADER*",
   group: "*GROUP*",
@@ -36,7 +36,7 @@ I am an automated system (WhatsApp Bot) that can help to do something, search an
 ╰────────────๑ 
 ${readmore} 
 `.trimStart(),
-  header: "*%category*",
+  header: "%category",
   body: "%cmd %isFree %isCoin",
   footer: "",
   after: `\n*Powerred By :* _https://api.arifzyn.biz.id_`,
@@ -96,6 +96,8 @@ module.exports = {
         help: Array.isArray(menu.name) ? menu.name : [menu.name],
         tags: Array.isArray(menu.tags) ? menu.tags : [menu.tags],
         prefix: menu.noPrefix ? "" : m.prefix,
+        free: menu.free,
+        coin: menu.coin
       };
     });
 
