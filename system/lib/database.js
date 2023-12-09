@@ -14,7 +14,10 @@ async function idb(m) {
     if (!isNumber(user.exp)) user.exp = 0;
     if (!isNumber(user.point)) user.point = 20;
     if (!isNumber(user.lastclaim)) user.lastclaim = 0;
-
+   
+    if (!isNumber(user.class)) user.class = 0;
+    if (!("game" in user)) user.game = "";
+    
     if (!isNumber(user.level)) user.level = 0;
     if (!("role" in user)) user.role = "Beginner";
 
