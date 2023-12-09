@@ -21,13 +21,18 @@ const defaultMenu = {
   before: `
 Hai, %name! 👋
 I am an automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.
+*STATUS LUUQEE BOT*
 *Library Luuqee BOT:* Baileys
 *Version Luuqee BOT* : %version
 *Luuqee BOT Aktif Selama* : %uptime
 *Hari* : %week %weton
 *Waktu* : %time
 *Tanggal* : %date
-*Sisa koin kamu*: %coin
+
+*STATUS KAMU*
+*Kelas Kamu*: *VIII*
+*Game Favorit*: *Mobile Legend*
+*Sisa Koin Mou Kamu*: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
   header: '%category',
