@@ -52,7 +52,7 @@ async function handler(m, { conn }) {
    (async() => {
       await manager.train();
       manager.save();
-      const response = await manager.process('id', m.text);
+      const response = await manager.process('id', m.msg);
       conn.sendMessage(m.from, { text: response.answer }, { quoted: m });
    })();
 }
