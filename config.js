@@ -8,11 +8,9 @@ moment.tz.setDefault("Asia/Jakarta").locale("id")
 const sekarang = moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')
 
 module.exports = {
-	options: {
+  options: {
       public: false,
-      antiCall: true, // reject call
       owner: ["6288708587429"], // set owner number on here
-      sessionName: "session", // for name session
       prefix: /^[°•π÷×¶∆£¢€¥®™+✓_|/~!?@#%^&.©^]/i,
       pathPlugins: "plugins",
       wm: "*Source:* https://api.arifzyn.biz.id"
