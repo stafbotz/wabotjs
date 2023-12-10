@@ -185,7 +185,7 @@ module.exports = {
         externalAdReply: {
           showAdAttribution: true,
           title: `${moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')}`,
-          body: "Copyright © 2023 Arifzyn.",
+          body: "Luuqee BOT",
           thumbnailUrl: "https://telegra.ph/file/0ca2ed4df216d05d9a5bf.jpg",
           sourceUrl: config.Exif.packId,
           mediaType: 1,
