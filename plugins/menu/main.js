@@ -103,7 +103,7 @@ module.exports = {
 
     for (let plugin of help)
       if (plugin && "tags" in plugin)
-        for (let tag of plugin.tags) if (!(tag in tags) && tag) tags[tag] = tag;
+        for (let tag of plugin.tags).filter(tag => tags[tag]);
     conn.menu = conn.menu ? conn.menu : {};
     let before = conn.menu.before || defaultMenu.before;
     let header = conn.menu.header || defaultMenu.header;
@@ -115,7 +115,7 @@ module.exports = {
         defaultMenu.after;
     let _text = [
       before,
-      ...Object.keys(tags).filter(tag => !tags[tag]).map((tag) => {
+      ...Object.keys(tags).map((tag) => {
         return (
           header.replace(/%category/g, tags[tag]) +
           "\n" +
@@ -187,7 +187,7 @@ module.exports = {
           title: `${moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')}`,
           body: "Luuqee BOT",
           thumbnailUrl: "https://telegra.ph/file/0ca2ed4df216d05d9a5bf.jpg",
-          sourceUrl: config.Exif.packId,
+          sourceUrl: 'https://whatsapp.com/channel/0029VaFXLTF6buMI2K8JXC1Q',
           mediaType: 1,
           renderLargerThumbnail: true,
         },
