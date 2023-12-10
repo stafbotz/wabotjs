@@ -43,7 +43,7 @@ async function handler(m, { conn }) {
       await manager.train();
       manager.save();
       const response = await manager.process('id', m.text);
-      conn.sendMessage(m.from, { text: response }, { quoted: m });
+      conn.sendMessage(m.from, { text: JSON.stringify(response) }, { quoted: m });
    })();
 }
 
