@@ -28,8 +28,8 @@ Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kem
 *Tanggal* : %date
 
 *(STATUS KAMU)*
-*Kelas Kamu*: *VIII*
-*Game Favorit*: *Mobile Legend*
+*Kelas Kamu*: VIII
+*Game Favorit*: Mobile Legend
 *Sisa Koin Mou Kamu*: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
@@ -115,7 +115,7 @@ module.exports = {
         defaultMenu.after;
     let _text = [
       before,
-      ...Object.keys(tags).map((tag) => {
+      ...Object.keys(tags).filter(tag => tags[tag]).map((tag) => {
         return (
           header.replace(/%category/g, tags[tag]) +
           "\n" +
