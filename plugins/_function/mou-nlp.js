@@ -35,6 +35,7 @@ manager.addAnswer('id', 'introduction.my', 'Hai, saya adalah Luuqee BOT! Saya di
 manager.addAnswer('id', 'introduction.my', 'Halo, perkenalkan saya adalah Luuqee BOT! Saya dibuat oleh Renshu Tim. Saya dibuat dengan konsep kreasi bersama, jadi semua orang bisa berkontribusi untuk bot ini.');
 manager.addAnswer('id', 'greetings.hello', 'Halo! Ada yang perlu saya bantu? Jangan sungkan! Saya akan selalu membantu siapapun.');
 manager.addAnswer('id', 'greetings.hello', 'Hai! Bagaimana kabarmu? Ada yang perlu saya bantu?');
+manager.addAnswer('id', 'translate', 'Tunggu sebentar ya! Luuqee sedang menerjemahkan.');
 
 async function handler(m, { conn }) {
 	if (!m.text) return
@@ -43,7 +44,7 @@ async function handler(m, { conn }) {
       await manager.train();
       manager.save();
       const response = await manager.process('id', m.text);
-      conn.sendMessage(m.from, { text: JSON.stringify(response) }, { quoted: m });
+      conn.sendMessage(m.from, { text: response.answer }, { quoted: m });
    })();
 }
 
