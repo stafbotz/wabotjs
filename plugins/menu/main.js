@@ -91,7 +91,7 @@ module.exports = {
     let muptime = Function.clockString(_muptime);
     let uptime = Function.clockString(_uptime);
 
-    const help = Array.from(plugins.values()).filter(menu => !menu.isOwner).map((menu) => {
+    const help = Array.from(plugins.values()).filter(menu => !menu.isOwner || tags[menu.tag]).map((menu) => {
       return {
         help: Array.isArray(menu.name) ? menu.name : [menu.name],
         tags: Array.isArray(menu.tags) ? menu.tags : [menu.tags],
@@ -103,7 +103,7 @@ module.exports = {
 
     for (let plugin of help)
       if (plugin && "tags" in plugin)
-        for (let tag of plugin.tags).filter(tag => tags[tag]);
+        for (let tag of plugin.tags);
     conn.menu = conn.menu ? conn.menu : {};
     let before = conn.menu.before || defaultMenu.before;
     let header = conn.menu.header || defaultMenu.header;
