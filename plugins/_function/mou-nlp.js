@@ -47,7 +47,7 @@ manager.addAnswer('id', 'greetings.hello', 'Hai! Bagaimana kabarmu? Ada yang per
 manager.addAnswer('id', 'translate', 'Tunggu sebentar ya! Luuqee sedang menerjemahkan.');
 
 async function handler(m, { conn }) {
-	if (!m.text) return
+	if (!m.msg) return
 	/*** Latih dan simpan modelnya. ***/
    (async() => {
       await manager.train();
