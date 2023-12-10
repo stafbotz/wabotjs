@@ -17,7 +17,7 @@ const tags = {
 const defaultMenu = {
   before: `
 Hai, %name! 👋
-Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa awalan [./#!] maka saya bisa menjadi asisten pribadimu!
+Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa awalan [/!#.] maka saya bisa menjadi asisten pribadimu!
 
 *(STATUS LUUQEE BOT)*
 *Library Luuqee BOT:* Baileys
@@ -186,7 +186,7 @@ module.exports = {
           showAdAttribution: true,
           title: `${moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')}`,
           body: "Luuqee BOT",
-          thumbnailUrl: "https://telegra.ph/file/0ca2ed4df216d05d9a5bf.jpg",
+          thumbnailUrl: "https://telegra.ph/file/af27c7192a6343a7a706e.png",
           sourceUrl: 'https://whatsapp.com/channel/0029VaFXLTF6buMI2K8JXC1Q',
           mediaType: 1,
           renderLargerThumbnail: true,
