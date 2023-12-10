@@ -115,7 +115,7 @@ module.exports = {
         defaultMenu.after;
     let _text = [
       before,
-      ...Object.keys(tags).filter(tag => tags[tag]).map((tag) => {
+      ...Object.keys(tags).filter(tag => !tags[tag]).map((tag) => {
         return (
           header.replace(/%category/g, tags[tag]) +
           "\n" +
