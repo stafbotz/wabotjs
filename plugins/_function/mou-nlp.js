@@ -36,7 +36,7 @@ manager.addAnswer('id', 'introduction.my', 'Halo, perkenalkan saya adalah Luuqee
 manager.addAnswer('id', 'greetings.hello', 'Halo! Ada yang perlu saya bantu? Jangan sungkan! Saya akan selalu membantu siapapun.');
 manager.addAnswer('id', 'greetings.hello', 'Hai! Bagaimana kabarmu? Ada yang perlu saya bantu?');
 
-async function handler(m) {
+async function handler(m, { conn }) {
 	if (!m.text) return
 	/*** Latih dan simpan modelnya. ***/
    (async() => {
