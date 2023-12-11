@@ -18,18 +18,18 @@ const defaultMenu = {
 Hai, %name! 👋
 Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa awalan [/!#.] maka saya bisa menjadi asisten pribadimu!
 
-*(STATUS LUUQEE BOT)*
-*Library:* Baileys
-*Version* : %version
-*Aktif Selama* : %uptime
-*Hari* : %week %weton
-*Waktu* : %time
-*Tanggal* : %date
+*Status Luuqee BOT*
+• Library: Baileys
+• Version: %version
+• Aktif Selama: %uptime
+• Hari: %week %weton
+• Waktu: %time
+• Tanggal: %date
 
-*(STATUS KAMU)*
-*Kelas Kamu*: %class
-*Game Favorit*: %game
-*Sisa Koin Mou*: %coin
+*Status Kamu*
+• Kelas: %class
+• Game Favorit*: %game
+• Sisa Koin Mou*: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
   header: '%category',
@@ -75,7 +75,7 @@ module.exports = {
     let time = d.toLocaleTimeString(locale, {
       hour: "numeric",
       minute: "numeric",
-      second: "numeric",
+      //second: "numeric",
     });
     let _uptime = process.uptime() * 1000;
     let _muptime;
