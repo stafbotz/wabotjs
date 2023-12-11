@@ -23,7 +23,10 @@ Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kem
 • Version: %version
 • Aktif Selama: %uptime
 • Hari: %week %weton
-• Waktu: %time
+• Waktu: 
+%wib WIB
+%wita WITA
+%wit WIT
 • Tanggal: %date
 
 *Status Kamu*
@@ -75,7 +78,7 @@ module.exports = {
     let time = d.toLocaleTimeString(locale, {
       hour: "numeric",
       minute: "numeric",
-      //second: "numeric",
+      second: "numeric",
     });
     let _uptime = process.uptime() * 1000;
     let _muptime;
