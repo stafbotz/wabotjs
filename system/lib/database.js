@@ -90,11 +90,14 @@ async function idb(m) {
     if (!isNumber(user.adventurecount)) user.adventurecount = 0;
   } else {
     global.db.users[m.sender] = {
-      coin: 100,
       lastChat: new Date() * 1,
       name: m.pushName,
       banned: false,
-
+      
+      coin: 100,
+      game: '',
+      class: 0,
+      
       exp: 0,
       point: 0,
       lastclaim: 0,
