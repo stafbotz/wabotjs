@@ -32,6 +32,7 @@ Tanggal: %date
 *Status Kamu*
 Kelas: %class
 Game Favorit: %game
+Mou Verse: %mouaccount
 Sisa Koin Mou: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
@@ -163,8 +164,9 @@ module.exports = {
         ? package.homepage.url || package.homepage
         : "[unknown github url]",
       coin: global.db.users[m.sender].coin,
-      class: global.db.users[m.sender].coin ? (global.db.users[m.sender].coin !== 0 ? global.db.users[m.sender].coin : 'belum bergabung') : 'belum bergabung',
-      game: global.db.users[m.sender].game ? global.db.users[m.sender].game : 'belum bergabung',
+      mouaccount: '-'
+      class: global.db.users[m.sender].coin ? (global.db.users[m.sender].coin !== 0 ? global.db.users[m.sender].coin : '-') : '-',
+      game: global.db.users[m.sender].game ? global.db.users[m.sender].game : '-',
       level,
       coin,
       name,
