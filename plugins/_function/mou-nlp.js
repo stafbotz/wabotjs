@@ -9,7 +9,7 @@ const { NlpManager } = require('node-nlp');
 const manager = new NlpManager({ languages: ['id'], forceNER: true });
 /*** Latih NLP (Natural Languange Processing) ***/
 // Perkenalan
-manager.addDocument('id', 'kamu siapa', 'introduction.my');
+manager.addDocument('id', 'kamu siapa sih', 'introduction.my');
 manager.addDocument('id', 'siapa namamu', 'introduction.my');
 manager.addDocument('id', 'kamu dibuat siapa', 'introduction.my');
 manager.addDocument('id', 'siapa penciptamu', 'introduction.my');
