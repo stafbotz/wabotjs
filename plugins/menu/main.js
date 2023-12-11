@@ -32,7 +32,7 @@ Tanggal: %date
 *Status Kamu*
 Kelas: %class
 Game Favorit: %game
-Mou Verse: %mouaccount
+Username Mou: %mouaccount
 Sisa Koin Mou: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
