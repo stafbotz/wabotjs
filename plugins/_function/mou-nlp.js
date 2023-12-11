@@ -21,6 +21,8 @@ manager.addDocument('id', 'apa aja sih yang kamu bisa', 'introduction.ability');
 // Salam 
 manager.addDocument('id', 'halo', 'greetings.hello');
 manager.addDocument('id', 'hai', 'greetings.hello');
+manager.addDocument('id', 'hlo', 'greetings.hello');
+manager.addDocument('id', 'assamualaikum', 'greetings.hello');
 manager.addDocument('id', 'hello', 'greetings.hello');
 manager.addDocument('id', 'hi', 'greetings.hello');
 manager.addDocument('id', 'hay', 'greetings.hello');
