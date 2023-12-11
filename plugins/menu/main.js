@@ -34,9 +34,10 @@ Kelas: %class
 Game Favorit: %game
 Username Mou: %mouaccount
 Sisa Koin Mou: %coin
-Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
+
+[ ! ] Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
-  header: '%category',
+  header: '*%category*',
   body: ' • %cmd %isFree %isCoin',
   footer: '\n',
   after: `*Made by ♡*
