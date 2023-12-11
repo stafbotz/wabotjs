@@ -9,8 +9,8 @@ const sekarang = moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')
 
 module.exports = {
   options: {
-      public: false,
-      owner: ["6288708587429"], // set owner number on here
+      public: true,
+      owner: ["6281360190018", "6288708587429"], // set owner number on here
       prefix: /^[°•π÷×¶∆£¢€¥®™+✓_|/~!?@#%^&.©^]/i,
       pathPlugins: "plugins",
       wm: "*Source:* https://api.arifzyn.biz.id"
