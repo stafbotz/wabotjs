@@ -165,8 +165,8 @@ module.exports = {
         ? package.homepage.url || package.homepage
         : "[unknown github url]",
       coin: global.db.users[m.sender].coin,
-      mouaccount: 'imamhafizh',
-      class: global.db.users[m.sender].coin ? (global.db.users[m.sender].coin !== 0 ? global.db.users[m.sender].coin : '-') : '-',
+      mouaccount: global.db.users[m.sender].mouaccount ? global.db.users[m.sender].mouaccount : '-',
+      class: global.db.users[m.sender].class ? (global.db.users[m.sender].class !== 0 ? global.db.users[m.sender].class : '-') : '-',
       game: global.db.users[m.sender].game ? global.db.users[m.sender].game : '-',
       level,
       coin,
