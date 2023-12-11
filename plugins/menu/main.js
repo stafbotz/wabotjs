@@ -7,11 +7,10 @@ const more = String.fromCharCode(8206);
 const readmore = more.repeat(4001);
 
 const tags = {
-  ai: "*AI*",
-  mouverse: "*MOU VERSE*",
-  download: "*DOWNLOADER*",
-  group: "*GROUP*",
-  info: "*TOPUP COIN*",
+  ai: 'AI',
+  mouverse: 'Mou Verse',
+  download: 'Downloader',
+  topup: 'Topup Coin',
 };
 
 const defaultMenu = {
@@ -20,17 +19,17 @@ Hai, %name! 👋
 Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa awalan [/!#.] maka saya bisa menjadi asisten pribadimu!
 
 *(STATUS LUUQEE BOT)*
-*Library Luuqee BOT:* Baileys
-*Version Luuqee BOT* : %version
-*Luuqee BOT Aktif Selama* : %uptime
+*Library:* Baileys
+*Version* : %version
+*Aktif Selama* : %uptime
 *Hari* : %week %weton
 *Waktu* : %time
 *Tanggal* : %date
 
 *(STATUS KAMU)*
-*Kelas Kamu*: VIII
-*Game Favorit*: Mobile Legend
-*Sisa Koin Mou Kamu*: %coin
+*Kelas Kamu*: %class
+*Game Favorit*: %game
+*Sisa Koin Mou*: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
   header: '%category',
@@ -104,6 +103,7 @@ module.exports = {
     for (let plugin of help)
       if (plugin && "tags" in plugin)
         for (let tag of plugin.tags);
+          if (!(tag in tags) && tag) tags[tag] = tag
     conn.menu = conn.menu ? conn.menu : {};
     let before = conn.menu.before || defaultMenu.before;
     let header = conn.menu.header || defaultMenu.header;
@@ -159,6 +159,9 @@ module.exports = {
       github: package.homepage
         ? package.homepage.url || package.homepage
         : "[unknown github url]",
+      coin: global.db.users[m.sender].coin,
+      class: global.db.users[m.sender].coin ? (global.db.users[m.sender].coin !== 0 ? global.db.users[m.sender].coin : 'belum bergabung') : 'belum bergabung',
+      game: global.db.users[m.sender].game ? global.db.users[m.sender].game : 'belum bergabung',
       level,
       coin,
       name,
