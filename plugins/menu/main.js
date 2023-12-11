@@ -22,17 +22,17 @@ Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kem
 Library: Baileys
 Version: %version
 Aktif Selama: %uptime
-Hari: %week %weton
 Waktu: 
 %wib WIB
 %wita WITA
 %wit WIT
+Hari: %week
 Tanggal: %date
 
 *Status Kamu*
 Kelas: %class
 Game Favorit: %game
-Sisa Koin Mou*: %coin
+Sisa Koin Mou: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
   header: '%category',
