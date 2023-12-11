@@ -17,6 +17,7 @@ async function idb(m) {
    
     if (!isNumber(user.class)) user.class = 0;
     if (!("game" in user)) user.game = "";
+    if (!("mouaccount" in user)) user.mouaccount = "";
     
     if (!isNumber(user.level)) user.level = 0;
     if (!("role" in user)) user.role = "Beginner";
@@ -97,6 +98,7 @@ async function idb(m) {
       coin: 100,
       game: '',
       class: 0,
+      mouaccount: '',
       
       exp: 0,
       point: 0,
