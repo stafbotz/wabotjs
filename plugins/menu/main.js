@@ -19,20 +19,20 @@ Hai, %name! 👋
 Halo saya adalah Luuqee BOT. Saya dibuat oleh Renshu Tim. Saya dibuat dengan kemampuan pemrosesan bahasa. Ketik apa saja tanpa awalan [/!#.] maka saya bisa menjadi asisten pribadimu!
 
 *Status Luuqee BOT*
-• Library: Baileys
-• Version: %version
-• Aktif Selama: %uptime
-• Hari: %week %weton
-• Waktu: 
+Library: Baileys
+Version: %version
+Aktif Selama: %uptime
+Hari: %week %weton
+Waktu: 
 %wib WIB
 %wita WITA
 %wit WIT
-• Tanggal: %date
+Tanggal: %date
 
 *Status Kamu*
-• Kelas: %class
-• Game Favorit*: %game
-• Sisa Koin Mou*: %coin
+Kelas: %class
+Game Favorit: %game
+Sisa Koin Mou*: %coin
 Pastikan untuk selalu mengisi koin Mou kamu, agar dapat menggunakan fitur Luuqee BOT.
 ${readmore} `.trimStart(),
   header: '%category',
